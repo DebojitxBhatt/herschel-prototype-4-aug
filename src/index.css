@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-bg-dark: #0a0807;
+    --color-gold-glow: rgba(201, 120, 62, 0.4);
+    --color-burgundy: #5a121d;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  
+  body {
+    background-color: #0e0b0a;
+    color: #f9f6f0;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom Typography */
+.font-serif-heading {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.font-mystical {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+/* Custom Gradients & Glows */
+.hero-glow {
+  background: radial-gradient(circle at 18% 45%, rgba(186, 96, 38, 0.55) 0%, rgba(95, 25, 25, 0.35) 30%, rgba(14, 11, 10, 0.95) 70%, #0e0b0a 100%);
+}
+
+.cosmic-glow-bg {
+  background: 
+    radial-gradient(ellipse at 75% 20%, rgba(190, 95, 30, 0.4) 0%, transparent 45%),
+    radial-gradient(ellipse at 25% 75%, rgba(30, 90, 130, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(15, 20, 35, 0.95) 0%, #0b0d14 100%);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-card-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card-hover:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(226, 163, 93, 0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px -10px rgba(201, 120, 62, 0.2);
+}
+
+.glass-card-light {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.08);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0e0b0a;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a2420;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #c9783e;
+}
+
+/* Subtle Shimmer Animation */
+@keyframes subtle-float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-float {
+  animation: subtle-float 5s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.05);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 4s ease-in-out infinite;
+}
