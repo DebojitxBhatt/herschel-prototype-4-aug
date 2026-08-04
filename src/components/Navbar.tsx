@@ -94,14 +94,14 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking, onNavigateSection
             <div className="flex items-center justify-center">
               <a 
                 href="#" 
-                className="group relative flex items-center justify-center w-10 h-10 md:w-11 md:h-11 rounded-full border border-stone-300 bg-stone-900 shadow-md hover:border-amber-600 hover:scale-105 transition-all duration-300"
+                className="group relative flex items-center justify-center w-10 h-10 md:w-11 md:h-11 rounded-full overflow-hidden border border-stone-300 shadow-md hover:border-amber-600 hover:scale-105 transition-all duration-300"
                 title="Herschel Lazaroff"
               >
-                <div className="w-7 h-7 md:w-8 md:h-8 rounded-full border border-amber-500/30 flex items-center justify-center bg-gradient-to-br from-[#4a1019] to-[#1a0508]">
-                  <span className="font-mystical text-base md:text-lg font-bold text-amber-200 group-hover:text-amber-100 transition-colors">
-                    ה
-                  </span>
-                </div>
+                <img 
+                  src="/images/navbar-logo.png" 
+                  alt="Herschel Lazaroff" 
+                  className="w-full h-full object-cover scale-105 rounded-full"
+                />
               </a>
             </div>
 
