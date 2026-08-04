@@ -48,7 +48,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking, onNavigateSection
           ? 'py-3 shadow-md' 
           : 'py-4 md:py-5 shadow-sm'
       }`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="flex items-center justify-between">
             
             {/* Left Nav Links (Desktop) */}
@@ -90,8 +90,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking, onNavigateSection
               </button>
             </div>
 
-            {/* Center Circular Emblem Seal Logo */}
-            <div className="flex items-center justify-center">
+            {/* Center Circular Emblem Seal Logo (Precisely Centered) */}
+            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center">
               <a 
                 href="#" 
                 className="group relative flex items-center justify-center w-10 h-10 md:w-11 md:h-11 rounded-full overflow-hidden border border-stone-300 shadow-md hover:border-amber-600 hover:scale-105 transition-all duration-300"
